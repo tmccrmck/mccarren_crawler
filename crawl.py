@@ -89,7 +89,7 @@ def parse(html):
         #print(t.time() >= earliest_date.time() and t.time() <= latest_date.time())
         if t.time() >= earliest_date.time() and t.time() <= latest_date.time():
           #print('adding to result{}')
-          result['{}, {}'.format(date.strftime('%B %d, %Y'), name)].append(t)
+          result['{}, {}'.format(date.strftime('%A -- %B %d, %Y'), name)].append(t)
 
   return result
 
@@ -140,4 +140,4 @@ a = parse(response)
 for k in a.keys():
   print(k)
   for t in a[k]:
-    print(t.strftime('%H:%M'))
+    print('  ' + t.strftime('%H:%M'))
