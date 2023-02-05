@@ -140,4 +140,4 @@ a = parse(response)
 for k in a.keys():
   print(k)
   for t in a[k]:
-    print('  ' + t.strftime('%H:%M'))
+    print(t.strftime('  %H:%M'))
